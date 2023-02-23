@@ -1,10 +1,4 @@
-name: Window
-
-on:
-  workflow_dispatch:
-
-jobs:
-name: Window
+name: Windows
 
 on:
   workflow_dispatch:
