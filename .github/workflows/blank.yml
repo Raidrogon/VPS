@@ -31,6 +31,7 @@ jobs:
         env: 
           ADMINPASSWORD: ${{ secrets.ADMINPASSWORD }}
         run: net user runneradmin $Env:ADMINPASSWORD
+        run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force)
         
       - name: Get Ngrok 
         run: Invoke-WebRequest http://localhost:4040/api/tunnels
